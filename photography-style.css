@@ -1,0 +1,132 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.header {
+	height: 75px;
+	width: 120%;
+	/*display: inline-block;*/
+	text-align: center;
+	background-color: #364f39;
+	box-shadow: 0px 35px 20px rgba(0,0,0,0.125);
+	position: fixed;
+	top: 0px;
+	left: -10%;
+	z-index: 10;
+}
+
+.title {
+	padding-top: 16px;
+	font-family: "Rubik", sans-serif;
+	font-size: 38px;
+	color: #FFFFFF;
+	display: inline-block;
+}
+
+.back {
+	transform: scaleX(-1);
+	fill: white;
+}
+
+.backbutton{
+	position: fixed;
+	top: 26px;
+	left: 26px;
+	border: none;
+	background: none;
+}
+
+.full {
+	background-color: #2a2a2a
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	/*grid-template-rows: 100%;*/
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	padding: 100px;
+	position: relative;
+	top: 40px;
+	height: auto;
+	z-index: 10;
+}
+
+.text-header {
+	background-color: #737373;
+	padding: 10px;
+	color: #FFFFFF;
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	height: auto;
+	border-radius: 4px 4px 16px 4px;
+	background-image: linear-gradient(to top left, #a8f4b3,#496b4e);
+	margin-bottom: 20px;
+}
+
+.text {
+	background-color: #737373;
+	padding: 10px;
+	color: #FFFFFF;
+	font-family: Roboto, sans-serif;
+	height: auto;
+	border-radius: 4px 4px 16px 4px;
+	margin-bottom: 20px;
+	/*background-image: linear-gradient(315deg, #a8f4b3,#496b4e 50%);*/
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	height: auto;
+	align-content: start;
+}
+
+.photo:hover {
+	box-shadow: 0px 0px 4px #333333;
+	position: relative;
+	top: -2px;
+	background-color: #a8f4b3;
+	color: #333333;
+	/*box-shadow: 0px 0px 0px 4px #a8f4b3;*/
+}
+
+.photo {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	width: 250px;
+	background-color: #5c5c5c;
+	color: #d0d0d0;
+}
+
+.image {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	height: 150px;
+	width: 250px;
+	object-fit: cover;
+}
+
+.label {
+	font-family: Roboto;
+	height: 25px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	text-align: center;
+	display: inline-block;
+	width: 250px;
+}
+
+.footer img{
+	width: 100%;
+}
+
+.shadowed {
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.125);
+}
