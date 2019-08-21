@@ -1,16 +1,59 @@
-* {
-	padding: 0px;
-	margin: 0px;
-	/*line-height: 0px;*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 .full {
-	background-color: #2a2a2a
+	background-color: #f7f7f7
 }
 
 .header_image_box {
 	position: relative;
-	background-color: #364f39;
+	background-color: #FFFFFF;
 	max-height: 500px;
 }
 
@@ -31,16 +74,17 @@
 .header_bar {
 	height: 100px;
 	width: 100%;
-	background-color: #364f39;
+	background-color: #FFFFFF;
 	position: relative;
 	padding-top: 20px;
 	padding-left: 100px;
 	box-sizing: border-box;
+	box-shadow: 1px 3px 3px rgba(0,0,0,0.25);
 }
 
 .avatar {
-	height: 200px;
-	width: 200px;
+	/*height: 15%;*/
+	width: 15%;
 	border-radius: 100%;
 	margin-right: 100px;
 	float: right;
@@ -49,7 +93,7 @@
 	right: 0px;
 }
 
-.grid {
+.option_grid {
 	display: flex;
 	flex-wrap: wrap;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -74,10 +118,10 @@
 	border: solid transparent 6px;
 	padding-top: 5px;
 	border-radius: 50px;
-	background-color: #2f2f2f;
+	background-color: #BBBBBB;
 	flex-grow: 1;
 	text-align: center;
-	fill: #777777;
+	fill: #BBBBBB;
 	box-sizing: border-box;
 	color: #777777;
 }
@@ -85,9 +129,9 @@
 .item:hover{
 	/*background-image: linear-gradient(to top left, #e59f71,#ba5a31);*/
 	/*box-shadow: 0px 0px 3px rgba(0,0,0,0.125);*/
-	color: #e59f71;
+	color: #ba5a31;
 	border: solid #ba5a31 6px;
-	background-color: #2a2a2a;
+	background-color: #BBBBBB;
 }
 
 .title {
@@ -95,6 +139,60 @@
 	margin-bottom: 10px;
 	position: absolute;
 	bottom: 10px;
+}
+
+.project_grid {
+	display: flex;
+	flex-wrap: wrap;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	/*grid-template-rows: 100%;*/
+	grid-column-gap: 40px;
+	grid-row-gap: 40px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 75px;
+	margin-bottom: 100px;
+	justify-content: space-between;
+	align-content: stretch;
+/*	position: relative;
+	top: 40px;
+	height: auto;*/
+}
+
+.project {
+	width: 300px;
+	height: 200px;
+	background-color: #FFFFFF;
+	flex-grow: 1;
+	border-radius: 10px;
+}
+
+.project_text_holder {
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+	height: 20%;
+	width: 100%;
+}
+
+.project:hover {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+
+.project img {
+	object-fit: cover;
+	width: 100%;
+	height: 80%;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	/*margin-bottom: 0;*/
+}
+
+.project_text_holder h4 {
+	color: #555555;
+	font-family: Rubik;
+	font-weight: 500;
+	margin-top: -8px;
 }
 
 h1 {
@@ -138,7 +236,7 @@ a:hover {
 }
 
 .shadowed {
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.125);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.13);
 }
 
 /*.header {
