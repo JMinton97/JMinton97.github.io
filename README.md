@@ -1,1 +1,1 @@
-A website to showcase personal projects. Uses Github Pages.
+A website to showcase personal projects. Should use Github Pages.
