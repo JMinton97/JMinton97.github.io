@@ -107,8 +107,10 @@ footer {
 	column-gap: 40px;
 	grid-row-gap: 40px;
 	grid-gap: 40px 40px;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: calc(10% - 2vw);
+	margin-right: calc(10% - 2vw);
+	padding-left: 1vw;
+	padding-right: 1vw;
 	margin-top: 0px;
 	margin-bottom: 80px;
 	justify-content: space-between;
@@ -125,6 +127,7 @@ footer {
 	flex-grow: 1;
 	flex-shrink: 1;
 	border-radius: 10px;
+	margin: 1vw;
 }
 
 .project_text_holder {
