@@ -104,7 +104,9 @@ footer {
 	grid-template-columns: 1fr 1fr 1fr;
 	/*grid-template-rows: 100%;*/
 	grid-column-gap: 40px;
+	column-gap: 40px;
 	grid-row-gap: 40px;
+	grid-gap: 40px 40px;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 0px;
@@ -117,8 +119,8 @@ footer {
 }
 
 .project {
-	width: 200px;
-	height: 200px;
+	width: 35vh;
+	height: 25vh;
 	background-color: #5c6863;
 	flex-grow: 1;
 	flex-shrink: 1;
