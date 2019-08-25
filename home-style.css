@@ -87,7 +87,7 @@ footer {
 
 .title {
 	margin-left: 10%;
-	margin-right: 30%;
+	margin-right: 10%;
 	margin-bottom: 10px;
 	position: absolute;
 	bottom: 10px;
@@ -251,6 +251,21 @@ p {
 	font-size: 30px;
 	font-weight: 500px;
 	margin-bottom: 25px;
+}
+
+.floater {
+	height: 61vh;
+	width: 350px;
+	background-color: #ebedec;
+	position: absolute;
+	z-index: 5;
+	right: 10vw;
+	border-radius: 10vh;
+	top: -2vh;
+}
+
+.sections {
+	position: relative;
 }
 
 a {
