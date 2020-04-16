@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/*font: inherit;*/
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -52,6 +52,14 @@ table {
     --code:#00FF62;
     --design:#FFC400;
     --photography:#3EDAFF;
+
+    --film-back:#860034;
+    --code-back:#00521F;
+    --design-back:#A26900;
+    --photography-back:#2837AA;
+
+    --textwhite:#EEF4ED;
+    --back:#040038;
 }
 
 
@@ -159,19 +167,21 @@ footer {
 	font-size: 2.5vh;
 }
 
-
-.section h1 {
-	color: white;
-	font-family: Rubik;
-	font-size: 5vh;
-	/*margin-bottom: 10px;*/
-	font-weight: 700;
+.section {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 20%;
+	padding-right: 20%;
+	overflow: hidden;
 }
 
-.section p {
-	color: white;
-	font-family: Rubik;
-	font-size: 2.5vh;
+
+.section h2 {
+	color: var(--textwhite);
+	font-family: "Raleway";
+	font-weight: 900;
+	font-size: 8vh;
+	/*margin-bottom: 10px;*/
 }
 
 .section img {
@@ -188,29 +198,28 @@ h1 {
 	margin-bottom: 1vh;
 }
 
-h2 {
-	font-family: "Rubik";
-	font-weight: 400;
-	font-size: 3.55vh;
-	font-style: italic;
-	line-height: 4vh;
-}
 
 h3 {
-	font-family: "Rubik";
-	font-size: 24px;
-	font-weight: 400;
+	font-family: "Ubuntu Mono";
+	font-size: 20px;
+	line-height: 1.25;
+	/*font-weight: normal;*/
+	color:var(--textwhite);
+	/*padding-bottom: 1vh;*/
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 p {
 	font-family: "Ubuntu Mono";
 	font-size: 20px;
-	line-height: 1.25;
-	font-weight: normal;
+	line-height: 1;
+	/*font-weight: normal;*/
+	color:var(--textwhite);
+	padding-bottom: 1vh;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-/*	color: white;
-*/}
+}
 
 .bold {
 	font-weight: 700;
@@ -225,6 +234,23 @@ p {
 	font-size: 2.5vh;
 	font-weight: 400;
 }
+
+
+
+.button {
+	border-radius: 15px;
+	margin-top:1vh;
+	margin-bottom: 1vh;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	background-color: rgba(255,255,255,0.1);
+	display: inline-block;
+	float: right;
+}
+
+
 
 #featured {
 	padding-left: 10%;
@@ -295,8 +321,36 @@ a:visited{
 	color:white;
 }
 
-a:hover {
-	background-color: white;
+.video a:hover {
+	background-color: var(--film);
+}
+
+.code a:hover {
+	background-color: var(--code);
+}
+
+.design a:hover {
+	background-color: var(--design);
+}
+
+.photography a:hover {
+	background-color: var(--photography);
+}
+
+.video.section {
+	background-color: var(--film-back);
+}
+
+.code.section {
+	background-color: var(--code-back);
+}
+
+.design.section {
+	background-color: var(--design-back);
+}
+
+.photography.section {
+	background-color: var(--photography-back);
 }
 
 .video a {
@@ -315,6 +369,11 @@ a:hover {
 	color: var(--photography);
 }
 
+a:hover {
+	color: var(--back);
+}
+
 .shadowed {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.13);
 }
+
