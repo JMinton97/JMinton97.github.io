@@ -259,8 +259,8 @@ p {
 	/*font-weight: normal;*/
 	color:var(--textwhite);
 	padding-bottom: 1vh;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+/*	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;*/
 }
 
 .bold {
