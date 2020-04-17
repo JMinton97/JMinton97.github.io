@@ -271,10 +271,13 @@ p {
 	text-decoration: underline;
 }
 
-.footer p {
+footer p {
 	font-family: "Rubik";
 	font-size: 2.5vh;
 	font-weight: 400;
+	color: rgb(100,100,100);
+	margin: 0;
+	padding: 0;
 }
 
 
