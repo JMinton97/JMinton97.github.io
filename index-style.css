@@ -89,10 +89,10 @@ table {
 }
 
 header {
-	padding-top: 2em;
+	padding-top: 4em;
 /*	padding-left: 20%;
 	padding-right: 20%;*/
-	padding-bottom: 3vh;
+	padding-bottom: 4em;
 	color: #EEF4ED;
 	background-color: #040038;
 }
@@ -282,6 +282,27 @@ footer p {
 
 
 
+.popup {
+	position: fixed;
+	box-sizing: border-box;
+	width: 94vw;
+	height: 94vh;
+	top:3vh;
+	left:3vw;
+	background-color: #292e34;
+	visibility: hidden;
+	border-radius: 1em;
+	padding: 1em;
+}
+
+.close {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+}
+
+
+
 .button {
 	border-radius: 15px;
 	/*margin-top:1vh;*/
@@ -371,3 +392,13 @@ a:hover {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.13);
 }
 
+.noScroll {
+    overflow: hidden;
+    /*position:fixed;*/
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.white { color: white; }
