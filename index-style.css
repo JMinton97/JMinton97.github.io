@@ -48,17 +48,37 @@ table {
 }
 
 :root {
+	--header:#D1AE84;
     --film:#FF0062;
     --code:#00FF62;
     --design:#FFC400;
     --photography:#3EDAFF;
 
+
+    --header-back:#252543;
     --film-back:#860034;
     --code-back:#00521F;
     --design-back:#A26900;
     --photography-back:#2837AA;
 
-    --textwhite:#EEF4ED;
+    --textwhite:rgba(255, 255, 255, 0.75);
+    --back:#040038;
+}
+
+[data-theme="dark"] {
+	--header:#D1AE84;
+    --film:#FF84B3;
+    --code:#81FFAF;
+    --design:#FFC476;
+    --photography:#8394FF;
+
+    --header-back:#2D2D3D;
+    --film-back:#4D262D;
+    --code-back:#233E2D;
+    --design-back:#44362C;
+    --photography-back:#1B203A;
+
+    --textwhite:rgba(255, 255, 255, 0.9);
     --back:#040038;
 }
 
@@ -98,7 +118,7 @@ header {
 	padding-right: 20%;*/
 	padding-bottom: 4em;
 	color: #EEF4ED;
-	background-color: #040038;
+	background-color: var(--header-back);
 }
 
 footer {
@@ -257,7 +277,7 @@ h1 {
 	font-weight: 900;
 	font-size: 10vh;
 	margin-bottom: 1vh;
-	color: #D1AE84;
+	color: var(--header);
 }
 
 

@@ -26,6 +26,7 @@ var changeCol = function() {
 		themeIcons[i].style.backgroundColor = 'rgba(255, 255, 255, 0)'
 	}
 	this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+	document.documentElement.setAttribute('data-theme', this.getAttribute('id'));
 }
 
 for (var i = 0; i < themeIcons.length; i++) {
