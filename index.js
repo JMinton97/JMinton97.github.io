@@ -17,5 +17,18 @@ for (var i = 0; i < 12; i++) {
 	})
 
 	photoGrid.appendChild(div)
-	photoGrid.appendChild(div)
+}
+
+var themeIcons = document.querySelectorAll('.theme_icon')
+
+var changeCol = function() {
+	for (var i = 0; i < themeIcons.length; i++) {
+		themeIcons[i].style.backgroundColor = 'rgba(255, 255, 255, 0)'
+	}
+	this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+}
+
+for (var i = 0; i < themeIcons.length; i++) {
+	var icon = themeIcons[i];
+	icon.addEventListener('click', changeCol, false);
 }
