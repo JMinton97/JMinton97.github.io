@@ -61,7 +61,30 @@ table {
     --design-back:#A26900;
     --photography-back:#2837AA;
 
+    --inactive: rgba(255, 255, 255, 0.5);;
+    --active: white;
+
     --textwhite:rgba(255, 255, 255, 0.75);
+    --back:#040038;
+}
+
+[data-theme="light"] {
+	--header:#694822;
+    --film:#B92D63;
+    --code:#27884C;
+    --design:#AD6609;
+    --photography:#394AB5;
+
+    --header-back:#EAEAF0;
+    --film-back:#EEE3E7;
+    --code-back:#E4EEE8;
+    --design-back:#F0ECE5;
+    --photography-back:#E5E6F2;
+
+    --inactive: rgba(68, 68, 68, 0.3);
+    --active: rgba(68, 68, 68, 1);
+
+    --textwhite:rgba(0, 0, 0, 0.6);
     --back:#040038;
 }
 
@@ -77,6 +100,9 @@ table {
     --code-back:#233E2D;
     --design-back:#44362C;
     --photography-back:#1B203A;
+
+    --inactive: rgba(255, 255, 255, 0.5);;
+    --active: white;
 
     --textwhite:rgba(255, 255, 255, 0.9);
     --back:#040038;
@@ -320,20 +346,42 @@ footer p {
 	padding: 0;
 }
 
+.backdrop-blur {
+  background-color: rgba(255, 255, 255, .4);
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, .2);
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
+  }
+}
+
 #theme_box {
 	display: inline-grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	background-color: rgba(255, 255, 255, 0.2);
+	/*background-color: rgba(255, 255, 255, 0.2);*/
 	border-radius: 12px;
+	position: fixed;
+	bottom: 5em;
+	z-index: 100;
+  	margin: 0px 0px 0 -61px;
+  	left: 50%;
 }
 
 .theme_icon {
-	padding: 0.4em;
-	/*background-color: rgba(255, 255, 255, 0.1);*/
+	padding: 10px;
+	color: var(--inactive);
 	border-radius: 12px;
 	cursor: pointer;
 }
 
+.selected {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: var(--active);
+}
 
 
 .popup {
@@ -455,4 +503,4 @@ a:hover {
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-.material-icons.white { color: white; }
+/*.material-icons.white { color: white; }*/

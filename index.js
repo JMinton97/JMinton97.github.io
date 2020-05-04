@@ -23,9 +23,9 @@ var themeIcons = document.querySelectorAll('.theme_icon')
 
 var changeCol = function() {
 	for (var i = 0; i < themeIcons.length; i++) {
-		themeIcons[i].style.backgroundColor = 'rgba(255, 255, 255, 0)'
+		themeIcons[i].classList.remove('selected');
 	}
-	this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+	this.classList.add('selected')
 	document.documentElement.setAttribute('data-theme', this.getAttribute('id'));
 }
 
@@ -33,3 +33,28 @@ for (var i = 0; i < themeIcons.length; i++) {
 	var icon = themeIcons[i];
 	icon.addEventListener('click', changeCol, false);
 }
+
+function setInitialTheme() {
+
+	if (window.matchMedia('prefers-color-scheme: dark').matches) {
+  		console.log('dark mode is enabled');
+    	document.documentElement.setAttribute('data-theme', 'dark');
+    	document.querySelector('#dark').classList.add('selected');
+	} else {
+  		console.log('dark mode is not enabled');
+    	document.documentElement.setAttribute('data-theme', 'colourful');
+    	document.querySelector('#colourful').classList.add('selected');
+	}	
+
+	window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+  	if (e.matches) {
+    	console.log('dark mode is enabled');
+    	document.documentElement.setAttribute('data-theme', 'dark');
+  	} else {
+  		console.log('dark mode is not enabled');
+    	document.documentElement.setAttribute('data-theme', 'colourful');
+  	}
+	});
+}
+
+setInitialTheme();
