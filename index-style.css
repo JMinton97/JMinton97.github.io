@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -48,7 +48,7 @@ table {
 }
 
 :root {
-	--header:#D1AE84;
+	--header:#c8965a;
     --film:#FF0062;
     --code:#00FF62;
     --design:#FFC400;
@@ -64,12 +64,14 @@ table {
     --inactive: rgba(255, 255, 255, 0.5);;
     --active: white;
 
-    --textwhite:rgba(255, 255, 255, 0.75);
+    --textwhite:rgba(255, 255, 255, 0.7);
     --back:#040038;
+
+    --footer:#17172a;
 }
 
 [data-theme="light"] {
-	--header:#694822;
+	--header:#394AB5;
     --film:#B92D63;
     --code:#27884C;
     --design:#AD6609;
@@ -86,6 +88,8 @@ table {
 
     --textwhite:rgba(0, 0, 0, 0.6);
     --back:#040038;
+
+    --footer:#a6b2c8;
 }
 
 [data-theme="dark"] {
@@ -106,6 +110,8 @@ table {
 
     --textwhite:rgba(255, 255, 255, 0.9);
     --back:#040038;
+
+    --footer:#00120b;
 }
 
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
@@ -154,8 +160,8 @@ footer {
 	padding-right: 10%;
 	padding-bottom: 50px;
 	text-align: center;
-	background-color: #00120b;
-	color: #2e3d37;
+	background-color: var(--footer);
+	color: var(--textwhite);
 	font-weight: 700;
 }
 
@@ -487,7 +493,7 @@ a:visited{
 }
 
 a:hover {
-	color: var(--back);
+	color: var(--header-back);
 }
 
 .shadowed {

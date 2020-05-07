@@ -44,17 +44,31 @@ function setInitialTheme() {
   		console.log('dark mode is not enabled');
     	document.documentElement.setAttribute('data-theme', 'colourful');
     	document.querySelector('#colourful').classList.add('selected');
-	}	
+	}
 
 	window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
   	if (e.matches) {
     	console.log('dark mode is enabled');
     	document.documentElement.setAttribute('data-theme', 'dark');
+        document.querySelector('#dark').classList.add('selected');
   	} else {
   		console.log('dark mode is not enabled');
-    	document.documentElement.setAttribute('data-theme', 'colourful');
+    	document.documentElement.setAttribute('data-theme', 'light');
+        document.querySelector('#light').classList.add('selected');
   	}
 	});
 }
 
 setInitialTheme();
+
+function setAge() {
+	var birth = new Date('1997-03-22');
+	var now = new Date();
+	var difference = now - birth;
+	var age = new Date(difference).getFullYear() - 1970
+
+	var span = document.getElementById('age');
+	span.innerHTML = age;
+}
+
+setAge();
