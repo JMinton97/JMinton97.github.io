@@ -152,6 +152,7 @@ header {
 	color: #EEF4ED;
 	background-color: var(--header-back);
     display: flex;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -179,6 +180,12 @@ footer {
 .bio {
     /* display: */
     flex-grow: 100;
+    max-width: 500px;
+}
+
+.visuals {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .avatar {
