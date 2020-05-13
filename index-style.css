@@ -124,6 +124,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	background-color: black;
 }
 
+
 .pad {
 	padding-left: 20%;
 	padding-right: 20%;
@@ -131,17 +132,37 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 @media (max-width: 576px) {
 	.pad {
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	}
+
+    #theme_box {
+        left: 92vw;
+    }
 
 }
 
 @media (min-width: 576px) {
-	header div p {
+	/* header div p {
 	max-width: 500px;
-	}
+	} */
+    .pad {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #theme_box {
+        left: 92vw;
+    }
+}
 
+@media (min-width: 1170px) {
+    .pad {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    #theme_box {
+        left: 82vw;
+    }
 }
 
 header {
@@ -153,6 +174,7 @@ header {
 	background-color: var(--header-back);
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 footer {
@@ -179,21 +201,24 @@ footer {
 
 .bio {
     /* display: */
-    flex-grow: 100;
+
     max-width: 500px;
 }
 
 .visuals {
     max-width: 500px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    /* float: right; */
 }
 
 .avatar {
     width: 180px;
+    height: 180px;
     border-radius: 12px;
     opacity: 90%;
     vertical-align: text-bottom;
     margin-bottom: 3em;
+    /* float: right; */
 }
 
 .backdrop-blur {
@@ -201,27 +226,33 @@ footer {
 }
 
 /* if backdrop support: very transparent and blurred */
-@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+/* @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
   .backdrop-blur {
     background-color: rgba(255, 255, 255, .2);
     -webkit-backdrop-filter: blur(2em);
     backdrop-filter: blur(2em);
   }
-}
+} */
 
 #theme_box {
-	display: table;
-	/* grid-template-columns: 1fr 1fr 1fr; */
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
 	/*background-color: rgba(255, 255, 255, 0.2);*/
 	border-radius: 12px;
-	/* position: fixed; */
-	/* bottom: 5em; */
+	position: fixed;
+	top: 4em;
 	z-index: 100;
-  	/* margin: 0px 0px 0 -61px; */
+  	margin: 0px 20% 0 0;
   	text-align: center;
     vertical-align: text-bottom;
     margin: 0 auto;
+    opacity: 0.1;
+    transition: opacity 0.25s;
+    float: right;
+}
 
+#theme_box:hover {
+    opacity: 1;
 }
 
 .theme_icon {
