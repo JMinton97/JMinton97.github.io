@@ -148,6 +148,15 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
         position: absolute;
         float: right;
         bottom: 4em;
+        width: 20%;
+    }
+
+    .avatar {
+        width: 100%;
+    }
+
+    :root {
+        --header: red;
     }
 
 }
@@ -171,6 +180,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
     .bio {
         max-width: 500px;
+    }
+
+    .avatar {
+        width: 180px;
+        height: 180px;
     }
 }
 
@@ -268,8 +282,6 @@ footer {
 }
 
 .avatar {
-    width: 180px;
-    height: 180px;
     border-radius: 12px;
     opacity: 90%;
     vertical-align: text-bottom;
