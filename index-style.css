@@ -146,7 +146,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
     .visuals {
         position: absolute;
-        float: right;
+        right: 1.5em;
         bottom: 4em;
         width: 20%;
     }
@@ -154,11 +154,6 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     .avatar {
         width: 100%;
     }
-
-    :root {
-        --header: red;
-    }
-
 }
 
 @media (min-width: 576px) {
