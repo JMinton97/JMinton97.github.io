@@ -144,6 +144,12 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
         padding-bottom: 2em;
     }
 
+    .visuals {
+        position: absolute;
+        float: right;
+        bottom: 4em;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -419,8 +425,8 @@ footer {
 	color: var(--textwhite);
 	font-family: "Raleway";
 	font-weight: 700;
-	font-size: 8vh;
-	margin-bottom: 2vh;
+	font-size: 4em;
+	margin-bottom: 0.25em;
 }
 
 .section.video h2 {
@@ -449,7 +455,7 @@ h1 {
 	font-family: "Raleway";
 	font-weight: 900;
 	font-size: 5em;
-	margin-bottom: 1vh;
+	margin-bottom: 0.1em;
 	color: var(--header);
     display: inline-block;
 }
