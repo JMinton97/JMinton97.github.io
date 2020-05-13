@@ -140,6 +140,10 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
         left: 92vw;
     }
 
+    header {
+        padding-bottom: 2em;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -147,13 +151,65 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	max-width: 500px;
 	} */
     .pad {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
+
+    header {
+        padding-bottom: 4em;
+    }
+
     #theme_box {
         left: 92vw;
     }
+
+    .bio {
+        max-width: 500px;
+    }
 }
+
+@media (max-width: 1000px) and (min-width: 576px) {
+	/* header div p {
+	max-width: 500px;
+	} */
+    .pad {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    header {
+        padding-bottom: 4em;
+    }
+
+    header p {
+        max-width: auto;
+    }
+
+    #theme_box {
+        left: 92vw;
+    }
+
+    .visuals {
+        position: absolute;
+        margin: 0 0 0 300px;
+        bottom: 4em;
+    }
+
+    header {
+        display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .bio {
+        max-width: 500px;
+    }
+}
+
+
 
 @media (min-width: 1170px) {
     .pad {
@@ -169,12 +225,12 @@ header {
 	padding-top: 4em;
 /*	padding-left: 20%;
 	padding-right: 20%;*/
-	padding-bottom: 4em;
 	color: #EEF4ED;
 	background-color: var(--header-back);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 footer {
@@ -199,12 +255,6 @@ footer {
 	bottom: 10px;
 } */
 
-.bio {
-    /* display: */
-
-    max-width: 500px;
-}
-
 .visuals {
     max-width: 500px;
     /* margin: 0 auto; */
@@ -217,7 +267,7 @@ footer {
     border-radius: 12px;
     opacity: 90%;
     vertical-align: text-bottom;
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
     /* float: right; */
 }
 
