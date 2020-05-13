@@ -93,17 +93,17 @@ table {
 }
 
 [data-theme="dark"] {
-	--header:#D1AE84;
+	--header:#d59e5d;
     --film:#FF84B3;
     --code:#81FFAF;
     --design:#FFC476;
     --photography:#8394FF;
 
-    --header-back:#2D2D3D;
-    --film-back:#4D262D;
-    --code-back:#233E2D;
-    --design-back:#44362C;
-    --photography-back:#1B203A;
+    --header-back:#22222e;
+    --film-back:#2f171b;
+    --code-back:#122118;
+    --design-back:#221b15;
+    --photography-back:#14182b;
 
     --inactive: rgba(255, 255, 255, 0.5);;
     --active: white;
@@ -147,7 +147,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     .visuals {
         position: absolute;
         right: 1.5em;
-        bottom: 4em;
+        bottom: 2em;
         width: 20%;
     }
 
@@ -161,8 +161,8 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	max-width: 500px;
 	} */
     .pad {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 14%;
+        padding-right: 14%;
     }
 
     header {
@@ -181,6 +181,10 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
         width: 180px;
         height: 180px;
     }
+
+    header {
+        padding-bottom: 4em;
+    }
 }
 
 @media (max-width: 1000px) and (min-width: 576px) {
@@ -188,16 +192,17 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	max-width: 500px;
 	} */
     .pad {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 14%;
+        padding-right: 14%;
+    }
+
+    .visuals {
+        bottom: 4em;
+        right: 14%;
     }
 }
 
 @media (max-width: 1000px) {
-
-    header {
-        padding-bottom: 4em;
-    }
 
     header p {
         max-width: auto;
@@ -209,8 +214,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
     .visuals {
         position: absolute;
-        margin: 0 0 0 300px;
-        bottom: 4em;
+        margin: 0 0 0 0px;
     }
 
     header {
@@ -260,7 +264,37 @@ footer {
 	font-weight: 700;
 }
 
+h1 {
+	font-family: "Raleway";
+	font-weight: 900;
+	font-size: 5em;
+	margin-bottom: 0.1em;
+	color: var(--header);
+    display: inline-block;
+}
 
+
+h3 {
+	font-family: "Ubuntu Mono";
+	font-size: 20px;
+	line-height: 1.25;
+	/*font-weight: normal;*/
+	color:var(--textwhite);
+	/*padding-bottom: 1vh;*/
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	font-family: "Ubuntu Mono";
+	font-size: 20px;
+	line-height: 1.1;
+	/*font-weight: normal;*/
+	color:var(--textwhite);
+	margin-bottom: 1em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
 
 /* .title {
 	margin-left: 10%;
@@ -333,6 +367,44 @@ footer {
 }
 
 
+.section {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	overflow: hidden;
+/*	padding-left: calc(-50vw + 50%);
+  	padding-right: calc(-50vw + 50%);*/
+}
+
+.section h2 {
+	color: var(--textwhite);
+	font-family: "Raleway";
+	font-weight: 700;
+	font-size: 4em;
+	margin-bottom: 0.25em;
+}
+
+.section.video h2 {
+	color: var(--film);
+}
+
+.section.code h2 {
+	color: var(--code);
+}
+
+.section.photography h2 {
+	color: var(--photography);
+}
+
+.section.design h2 {
+	color: var(--design);
+}
+
+.section img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
 /* A CARD STYLE FLEX BOX */
 .project_grid {
 	display: flex;
@@ -353,19 +425,30 @@ footer {
 .project {
 	width: 30vh;
 	height: 20vh;
-	background-color: var(--textwhite);
+	background-color: black;
 	flex-grow: 1;
 	flex-shrink: 1;
 	border-radius: 10px;
 	margin: 0.5em;
+    transition: box-shadow 0.25s;
+    display: inline;
+    position: relative;
 }
 
 .project_text_holder {
 	display: flex;
+    position: absolute;
 	justify-content: center; /* align horizontal */
 	align-items: center; /* align vertical */
-	height: 20%;
+	height: 30%;
 	width: 100%;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0), #000000
+    );
+    bottom: 0px;
+    margin-bottom: 0px;
+    border-radius: 0 0 10px 10px;
+    font-weight: 900;
 }
 
 .project:hover {
@@ -375,18 +458,9 @@ footer {
 .project img {
 	object-fit: cover;
 	width: 100%;
-	height: 80%;
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-	/*margin-bottom: 0;*/
-}
-
-.project_text_holder h4 {
-	color: #172721;
-	font-family: Rubik;
-	font-weight: 500;
-	margin-top: -8px;
-	font-size: 2.5vh;
+	height: 100%;
+	border-radius: 10px;
+    opacity: 0.75;
 }
 
 .photo_grid {
@@ -419,75 +493,9 @@ footer {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.52);
 }
 
-.section {
-	padding-top: 3vh;
-	padding-bottom: 3vh;
-	overflow: hidden;
-/*	padding-left: calc(-50vw + 50%);
-  	padding-right: calc(-50vw + 50%);*/
-}
 
-
-.section h2 {
-	color: var(--textwhite);
-	font-family: "Raleway";
-	font-weight: 700;
-	font-size: 4em;
-	margin-bottom: 0.25em;
-}
-
-.section.video h2 {
-	color: var(--film);
-}
-
-.section.code h2 {
-	color: var(--code);
-}
-
-.section.photography h2 {
-	color: var(--photography);
-}
-
-.section.design h2 {
-	color: var(--design);
-}
-
-.section img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-
-h1 {
-	font-family: "Raleway";
-	font-weight: 900;
-	font-size: 5em;
-	margin-bottom: 0.1em;
-	color: var(--header);
-    display: inline-block;
-}
-
-
-h3 {
-	font-family: "Ubuntu Mono";
-	font-size: 20px;
-	line-height: 1.25;
-	/*font-weight: normal;*/
-	color:var(--textwhite);
-	/*padding-bottom: 1vh;*/
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-}
-
-p {
-	font-family: "Ubuntu Mono";
-	font-size: 20px;
-	line-height: 1.1;
-	/*font-weight: normal;*/
-	color:var(--textwhite);
-	margin-bottom: 1em;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+header p {
+    margin-bottom: 0px;
 }
 
 .bold {
