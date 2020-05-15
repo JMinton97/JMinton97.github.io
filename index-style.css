@@ -50,7 +50,7 @@ table {
 :root {
 	--header:#c8965a;
     --film:#FF0062;
-    --code:#00FF62;
+    --code:#07ec5f;
     --design:#FFC400;
     --photography:#3EDAFF;
 
@@ -266,7 +266,7 @@ footer {
 
 h1 {
 	font-family: "Raleway";
-	font-weight: 900;
+	font-weight: 800;
 	font-size: 5em;
 	margin-bottom: 0.1em;
 	color: var(--header);
@@ -275,7 +275,7 @@ h1 {
 
 
 h3 {
-	font-family: "Ubuntu Mono";
+	font-family: "Karla";
 	font-size: 20px;
 	line-height: 1.25;
 	/*font-weight: normal;*/
@@ -286,10 +286,10 @@ h3 {
 }
 
 p {
-	font-family: "Ubuntu Mono";
+	font-family: "Karla";
 	font-size: 20px;
 	line-height: 1.1;
-	/*font-weight: normal;*/
+	font-weight: 400;
 	color:var(--textwhite);
 	margin-bottom: 1em;
 	-moz-osx-font-smoothing: grayscale;
@@ -507,7 +507,7 @@ header p {
 }
 
 footer p {
-	font-family: "Ubuntu Mono";
+	font-family: "Karla";
 	font-size: 2.5vh;
 	font-weight: 400;
 	color: rgb(100,100,100);
