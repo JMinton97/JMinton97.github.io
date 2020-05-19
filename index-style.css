@@ -462,6 +462,11 @@ p {
 	height: 100%;
 	border-radius: 10px;
     opacity: 0.75;
+    transition: opacity 0.25s;
+}
+
+.project img:hover {
+    opacity: 1;
 }
 
 .photo_grid {
@@ -573,22 +578,38 @@ a:visited{
 	color:white;
 }
 
-.video a:hover {
+a.video{
+    color: var(--film)
+}
+
+a.code{
+    color: var(--code)
+}
+
+a.design{
+    color: var(--design)
+}
+
+a.photography{
+    color: var(--photography)
+}
+
+a.video:hover {
 	background-color: var(--film);
     text-decoration: none;
 }
 
-.code a:hover {
+a.code:hover {
 	background-color: var(--code);
     text-decoration: none;
 }
 
-.design a:hover {
+a.design:hover {
 	background-color: var(--design);
     text-decoration: none;
 }
 
-.photography a:hover {
+a.photography:hover {
 	background-color: var(--photography);
     text-decoration: none;
 }
