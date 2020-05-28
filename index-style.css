@@ -454,6 +454,7 @@ p {
 
 .project:hover {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.52);
+    opacity: 1;
 }
 
 .project img {

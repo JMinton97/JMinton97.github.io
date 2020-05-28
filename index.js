@@ -42,8 +42,8 @@ function setInitialTheme() {
     	document.querySelector('#dark').classList.add('selected');
 	} else {
   		console.log('dark mode is not enabled');
-    	document.documentElement.setAttribute('data-theme', 'colourful');
-    	document.querySelector('#colourful').classList.add('selected');
+    	document.documentElement.setAttribute('data-theme', 'light');
+    	document.querySelector('#light').classList.add('selected');
 	}
 
 	window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
