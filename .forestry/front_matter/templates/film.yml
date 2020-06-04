@@ -17,3 +17,5 @@ fields:
   config:
     maxSize: 64
   label: image
+pages:
+- https://github.com/JMinton97/JMinton97.github.io/tree/master/films/known.md
