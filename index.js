@@ -42,8 +42,8 @@ function setInitialTheme() {
     	document.querySelector('#dark').classList.add('selected');
 	} else {
   		console.log('dark mode is not enabled');
-    	document.documentElement.setAttribute('data-theme', 'light');
-    	document.querySelector('#light').classList.add('selected');
+    	document.documentElement.setAttribute('data-theme', 'colourful');
+    	document.querySelector('#colourful').classList.add('selected');
 	}
 
 	window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
@@ -53,8 +53,8 @@ function setInitialTheme() {
         document.querySelector('#dark').classList.add('selected');
   	} else {
   		console.log('dark mode is not enabled');
-    	document.documentElement.setAttribute('data-theme', 'light');
-        document.querySelector('#light').classList.add('selected');
+    	document.documentElement.setAttribute('data-theme', 'colourful');
+        document.querySelector('#colourful').classList.add('selected');
   	}
 	});
 }
@@ -72,3 +72,45 @@ function setAge() {
 }
 
 setAge();
+
+
+
+
+// Replace ./data.json with your JSON feed
+fetch('https://ghibliapi.herokuapp.com/films')
+  .then(response => {
+    return response.json()
+  })
+  .then(data => {
+    // Work with JSON data here
+    var data = JSON.parse(this.response)
+
+    data.forEach(movie => {
+      // Log each movie's title
+      console.log(movie.title)
+    })
+  })
+  .catch(err => {
+    // Do something for an error here
+  })
+
+
+//GETTING DATA
+// Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest()
+
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
+
+request.onload = function() {
+    // Begin accessing JSON data here
+  var data = JSON.parse(this.response)
+
+  data.forEach(movie => {
+    // Log each movie's title
+    console.log(movie.title)
+  })
+}
+
+// Send request
+request.send()
