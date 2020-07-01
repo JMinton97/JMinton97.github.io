@@ -1,0 +1,21 @@
+---
+label: Film
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: url
+  type: text
+  config:
+    required: false
+  label: url
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: image
+pages:
+- https://github.com/JMinton97/JMinton97.github.io/tree/master/films/known.md
