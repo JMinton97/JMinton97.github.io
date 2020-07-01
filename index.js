@@ -42,8 +42,8 @@ function setInitialTheme() {
     	document.querySelector('#dark').classList.add('selected');
 	} else {
   		console.log('dark mode is not enabled');
-    	document.documentElement.setAttribute('data-theme', 'colourful');
-    	document.querySelector('#colourful').classList.add('selected');
+    	document.documentElement.setAttribute('data-theme', 'light');
+    	document.querySelector('#light').classList.add('selected');
 	}
 
 	window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
@@ -53,8 +53,8 @@ function setInitialTheme() {
         document.querySelector('#dark').classList.add('selected');
   	} else {
   		console.log('dark mode is not enabled');
-    	document.documentElement.setAttribute('data-theme', 'colourful');
-        document.querySelector('#colourful').classList.add('selected');
+    	document.documentElement.setAttribute('data-theme', 'light');
+        document.querySelector('#light').classList.add('selected');
   	}
 	});
 }
@@ -73,44 +73,45 @@ function setAge() {
 
 setAge();
 
+function getContentfulAssetURL(data, id){
+    for (var i = 0; i < data.includes.Asset.length; i++) {
+        if(data.includes.Asset[i].sys.id == id){
+            return img_link = 'https://' + data.includes.Asset[i].fields.file.url.substring(2)
+        }
+    }
+}
+
+// <a class="project shadowed" href="https://youtu.be/Q7448UCTyXk">
+//     <img src="video_thumbnails/morgan_thumb.png"></img>
+//     <p class="project_text_holder">Morgan Sign</p>
+// </a>
 
 
+const filmGrid = document.querySelector('#film_grid')
 
-// Replace ./data.json with your JSON feed
-fetch('https://ghibliapi.herokuapp.com/films')
+fetch('https://cdn.contentful.com/spaces/t2ob7i6525u0/entries?access_token=auaXD-PMbWyn3gce66QXgTVkkaa5g1j7QUnNrGByha4&content_type=film')
   .then(response => {
     return response.json()
   })
   .then(data => {
     // Work with JSON data here
-    var data = JSON.parse(this.response)
+    data.items.forEach(film => {
+      const a = document.createElement('a')
+      const img = document.createElement('img')
+      const p = document.createElement('p')
+      a.classList.add('project')
+      a.classList.add('shadowed')
+      a.setAttribute('href', film.fields.url)
 
-    data.forEach(movie => {
-      // Log each movie's title
-      console.log(movie.title)
+      var img_link = getContentfulAssetURL(data, film.fields.photo.sys.id)
+      img.setAttribute('src',  img_link)
+      p.classList.add('project_text_holder')
+      p.textContent = film.fields.title
+      filmGrid.appendChild(a)
+      a.appendChild(img)
+      a.appendChild(p)
     })
   })
   .catch(err => {
     // Do something for an error here
   })
-
-
-//GETTING DATA
-// Create a request variable and assign a new XMLHttpRequest object to it.
-var request = new XMLHttpRequest()
-
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
-
-request.onload = function() {
-    // Begin accessing JSON data here
-  var data = JSON.parse(this.response)
-
-  data.forEach(movie => {
-    // Log each movie's title
-    console.log(movie.title)
-  })
-}
-
-// Send request
-request.send()
